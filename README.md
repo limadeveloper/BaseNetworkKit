@@ -1,10 +1,10 @@
-# NetworkKit
+# BaseNetworkKit
 
-[![GitHub release](https://img.shields.io/github/release/limadeveloper/NetworkKit.svg)](https://github.com/limadeveloper/NetworkKit/releases)
-[![Build Status](https://travis-ci.com/limadeveloper/NetworkKit.svg?branch=master)](https://travis-ci.com/limadeveloper/NetworkKit)
-[![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/NetworkKit)
+[![GitHub release](https://img.shields.io/github/release/limadeveloper/BaseNetworkKit.svg)](https://github.com/limadeveloper/BaseNetworkKit/releases)
+[![Build Status](https://travis-ci.com/limadeveloper/BaseNetworkKit.svg?branch=master)](https://travis-ci.com/limadeveloper/BaseNetworkKit)
+[![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/BaseNetworkKit)
 
-**NetworkKit** is the easiest way to create your network layer in Swift.
+**BaseNetworkKit** is the easiest way to create your network layer in Swift.
 
 ## Requirements
 
@@ -15,11 +15,11 @@
 
 ### CocoaPods
 
-**NetworkKit** is available through [CocoaPods](https://cocoapods.org/pods/NetworkKit). To install
+**BaseNetworkKit** is available through [CocoaPods](https://cocoapods.org/pods/BaseNetworkKit). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'NetworkKit', '~> 1.0'
+pod 'BaseNetworkKit', '~> 1.0'
 ```
 
 and run `pod install`
@@ -29,22 +29,79 @@ and run `pod install`
 Just copy source folder to your project.
 
 ```script
-Framework > NetworkKit > Source
+Framework > BaseNetworkKit > Source
 ```
 
 ## How to use
 
-Import library in your swift file:
+Import library in your network layer:
 
 ```Swift
-import NetworkKit
+import BaseNetworkKit
 ```
 
-Example:
+*Example using [`Twitch API`](https://dev.twitch.tv/docs/v5/):*
+
+Setup request
 
 ```Swift
+enum RequesterAPI {
+  case topGames(ModelRequest)
+}
 
+extension RequesterAPI: NKFlowTarget {
+  var baseURL: URL! {
+    return URL(string: "https://api.twitch.tv/")
+  }
+
+  var path: String {
+    switch self {
+    case .topGames:
+      return "kraken/games/top"
+    }
+  }
+
+  var method: NKHTTPMethods {
+    return .get
+  }
+
+  var headers: NKCommon.HTTPHeader? {
+    return [
+      "Accept": "application/vnd.twitchtv.v5+json",
+      "Client-ID": "5f1mxwqmosk9lsmwoglmz7o6icahcq"
+    ]
+  }
+
+  var task: Task {
+    switch self {
+    case .topGames(let body):
+      guard let params = body.dictionary(), !params.isEmpty else {
+        return .requestPlain
+      }
+      return .requestParameters(params, encoding: .queryString)
+    }
+  }
+
+  var environment: NKEnvironment {
+    return .develop
+  }
+}
 ```
+
+Than, create a request function
+
+```swift
+final class Requester: NKBaseService<RequesterAPI> {
+  func fetchGames(page: Int, limit: Int, completion: @escaping NKCommon.Completion<Model>) {
+    let requestModel = ModelRequest(offset: "\(page)", limit: "\(limit)")
+    fetch(.topGames(requestModel), dataType: Model.self) { result, _, error in
+      completion(result, error)
+    }
+  }
+}
+```
+
+*If you need more examples, open [`demo project`](https://github.com/limadeveloper/BaseNetworkKit/tree/master/Demo).*
 
 ## Communication
 
@@ -54,4 +111,4 @@ Example:
 
 ## License
 
-**NetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/limadeveloper/NetworkKit/master/LICENSE) file for more info.
+**BaseNetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE) file for more info.
