@@ -72,7 +72,7 @@ extension RequesterAPI: NKFlowTarget {
     ]
   }
 
-  var task: Task {
+  var task: NKTask {
     switch self {
     case .topGames(let body):
       guard let params = body.dictionary(), !params.isEmpty else {

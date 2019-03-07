@@ -36,7 +36,7 @@ public enum NKParameterEncoding {
   case httpBody
 }
 
-public enum Task {
+public enum NKTask {
   /// A request with no additional data.
   case requestPlain
 
@@ -70,7 +70,7 @@ public protocol NKFlowTarget {
   var headers: NKCommon.HTTPHeader? { get }
 
   /// The task to be used in the request.
-  var task: Task { get }
+  var task: NKTask { get }
 
   /// The app environment: `develop` or `production`
   var environment: NKEnvironment { get }
