@@ -111,4 +111,4 @@ final class Requester: NKBaseService<RequesterAPI> {
 
 ## License
 
-**BaseNetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE) file for more info.
+**BaseNetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE?token=ALdmBr7BYPLFm0JcKkmChbVeGU10EblTks5cgHzcwA%3D%3D) file for more info.
