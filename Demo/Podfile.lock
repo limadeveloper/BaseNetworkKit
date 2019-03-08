@@ -1,5 +1,5 @@
 PODS:
-  - BaseNetworkKit (1.0.0)
+  - BaseNetworkKit (1.0.1)
   - ObservableKit (1.0.1)
 
 DEPENDENCIES:
@@ -13,9 +13,9 @@ SPEC REPOS:
     - BaseNetworkKit
 
 SPEC CHECKSUMS:
-  BaseNetworkKit: 688ecc5f90a8d831dde56d21639a66186177ef9f
+  BaseNetworkKit: 5266ce148e280df3eac7d3b858cb049d61a4cb48
   ObservableKit: f5f914904a359cbe56afa80ea411b45d5786058f
 
-PODFILE CHECKSUM: a7f07695c199f503ed43d30e8de19a493899fa32
+PODFILE CHECKSUM: 2b51e41af5b9bc0f0b2ee3532c355291679d27cc
 
 COCOAPODS: 1.6.1
