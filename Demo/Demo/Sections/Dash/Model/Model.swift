@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BaseNetworkKit
 
 struct Model: NKCodable {
   let topGames: [GameModel]
