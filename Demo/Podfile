@@ -1,10 +1,13 @@
 platform :ios, '9.3'
 
-target 'Demo' do
+source "https://github.com/limadeveloper/BaseNetworkKit.git"
+
+target 'NKDemo' do
   use_frameworks!
   inhibit_all_warnings!
 
   # Pods for Demo
   pod 'ObservableKit', '~> 1.0'
+  pod 'BaseNetworkKit', '~> 1.0'
 
 end

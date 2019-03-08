@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class NKBaseService<T: NKFlowTarget> {
+open class NKBaseService<T: NKFlowTarget> {
 
   // MARK: - Properties
   public var provider = NKFlowProvider<T>()
