@@ -27,6 +27,9 @@ open class NKBaseService<T: NKFlowTarget> {
   // MARK: - Properties
   public var provider = NKFlowProvider<T>()
 
+  // MARK: - Initializers
+  public init() {}
+
   // MARK: - Public Methods
   public func fetch(_ target: T, completion: NKCommon.CompletionHandlerPlain) {
     provider.request(target) { data, response, error in
