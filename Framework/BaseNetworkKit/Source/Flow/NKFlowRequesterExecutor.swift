@@ -62,23 +62,23 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
                              _ error: Error?) {
     let uuid = UUID().uuidString
 
-    print("\n======= REQUEST =======")
+    print("\n=============== REQUEST ================")
     print("REQUEST #: \(uuid)")
-    print("🚀 URL: \(request.url?.absoluteString ?? "")")
+    print("↗️ URL: \(request.url?.absoluteString ?? "")")
 
     if let requestHeaders = request.allHTTPHeaderFields,
       let requestHeadersData = try? JSONSerialization.data(withJSONObject: requestHeaders, options: .prettyPrinted),
       let requestHeadersString = String(data: requestHeadersData, encoding: .utf8) {
-      print("🚀 HEADERS:\n\(requestHeadersString)")
+      print("↗️ HEADERS:\n\(requestHeadersString)")
     }
 
     if let requestBodyData = request.httpBody,
       let requestBody = String(data: requestBodyData, encoding: .utf8) {
-      print("🚀 BODY: \(requestBody)")
+      print("↗️ BODY: \(requestBody)")
     }
 
     if let httpResponse = response as? HTTPURLResponse {
-      print("\n======= RESPONSE =======")
+      print("\n============== RESPONSE ==============")
       switch httpResponse.statusCode {
       case 200...202:
         print("✅ CODE: \(httpResponse.statusCode)")
@@ -90,7 +90,7 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
 
       if let responseHeadersData = try? JSONSerialization.data(withJSONObject: httpResponse.allHeaderFields, options: .prettyPrinted),
         let responseHeadersString = String(data: responseHeadersData, encoding: .utf8) {
-        print("🚀 HEADERS:\n\(responseHeadersString)")
+        print("↙️ HEADERS:\n\(responseHeadersString)")
       }
 
       if let responseData = responseData,
@@ -100,11 +100,11 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
     }
 
     if let urlError = error as? URLError {
-      print("\n======= ERROR =======")
+      print("\n=============== ERROR ===============")
       print("❌ CODE: \(urlError.errorCode)")
       print("❌ DESCRIPTION: \(urlError.localizedDescription)\n")
     }
 
-    print("======== END OF: \(uuid) ========\n\n")
+    print("========== END OF: \(uuid) ==========\n\n")
   }
 }

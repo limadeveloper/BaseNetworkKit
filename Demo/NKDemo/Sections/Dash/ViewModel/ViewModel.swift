@@ -11,7 +11,7 @@ import ObservableKit
 
 class ViewModel {
 
-  private let requester = Requester()
+  private let requester = DashService()
 
   let observable: OKObservable<OKState<Model>> = OKObservable(.loading)
   var items: [Model.GameModel] = []

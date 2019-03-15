@@ -65,7 +65,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		82C1B2B3222C287F00B677AA /* Request */ = {
+		82C1B2B3222C287F00B677AA /* Flow */ = {
 			isa = PBXGroup;
 			children = (
 				82C1B2B5222C287F00B677AA /* NKFlowProvider.swift */,
@@ -76,7 +76,7 @@
 				82C1B2B6222C287F00B677AA /* NKFlowMultipartFormData.swift */,
 				82C1B2B7222C287F00B677AA /* Extension */,
 			);
-			path = Request;
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		82C1B2B7222C287F00B677AA /* Extension */ = {
@@ -125,7 +125,7 @@
 				82C1B2CF222C325A00B677AA /* NKEncodable.swift */,
 				82CEE2EC222B13E800F3155D /* NKBaseService.swift */,
 				82CEE303222B1C4B00F3155D /* Error */,
-				82C1B2B3222C287F00B677AA /* Request */,
+				82C1B2B3222C287F00B677AA /* Flow */,
 			);
 			path = Source;
 			sourceTree = "<group>";

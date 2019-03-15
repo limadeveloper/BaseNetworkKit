@@ -1,19 +1,19 @@
 //
-//  Requester.swift
-//  Demo
+//  DashAPI.swift
+//  NKDemo
 //
-//  Created by John Lima on 04/03/19.
+//  Created by John Lima on 15/03/19.
 //  Copyright © 2019 limadeveloper. All rights reserved.
 //
 
 import Foundation
 import BaseNetworkKit
 
-enum RequesterAPI {
+enum DashAPI {
   case topGames(ModelRequest)
 }
 
-extension RequesterAPI: NKFlowTarget {
+extension DashAPI: NKFlowTarget {
   var baseURL: URL! {
     return URL(string: "https://api.twitch.tv/")
   }
@@ -48,14 +48,5 @@ extension RequesterAPI: NKFlowTarget {
 
   var environment: NKEnvironment {
     return .develop
-  }
-}
-
-final class Requester: NKBaseService<RequesterAPI> {
-  func fetchGames(page: Int, limit: Int, completion: @escaping NKCommon.Completion<Model>) {
-    let requestModel = ModelRequest(offset: "\(page)", limit: "\(limit)")
-    fetch(.topGames(requestModel), dataType: Model.self) { result, _, error in
-      completion(result, error)
-    }
   }
 }
