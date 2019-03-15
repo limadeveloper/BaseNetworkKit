@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1873DC417021297809ACEA /* Pods_NKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039D24BC00DB1228A48D191D /* Pods_NKDemo.framework */; };
 		8231B4E8222E9A7F00FFABB0 /* DashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B4E7222E9A7F00FFABB0 /* DashTableViewCell.swift */; };
 		8231B4EB222E9B9500FFABB0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B4EA222E9B9500FFABB0 /* UIImageView+Extensions.swift */; };
 		826C7405222CA68600B1B119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826C7404222CA68600B1B119 /* AppDelegate.swift */; };
@@ -14,14 +15,14 @@
 		826C740A222CA68600B1B119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826C7408222CA68600B1B119 /* Main.storyboard */; };
 		826C740C222CA68700B1B119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826C740B222CA68700B1B119 /* Assets.xcassets */; };
 		826C740F222CA68700B1B119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826C740D222CA68700B1B119 /* LaunchScreen.storyboard */; };
-		82C5B02B222E0E30000BD126 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5B02A222E0E30000BD126 /* Requester.swift */; };
+		8281F479223B4F65007892CB /* DashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8281F478223B4F65007892CB /* DashAPI.swift */; };
+		82C5B02B222E0E30000BD126 /* DashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5B02A222E0E30000BD126 /* DashService.swift */; };
 		82C5B02D222E0E66000BD126 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5B02C222E0E66000BD126 /* Model.swift */; };
 		82C5B02F222E218C000BD126 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5B02E222E218C000BD126 /* ViewModel.swift */; };
-		E3ACD98A75A000AB1B293E2C /* Pods_NKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B766A13B47C1100C9F5027 /* Pods_NKDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58B766A13B47C1100C9F5027 /* Pods_NKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		039D24BC00DB1228A48D191D /* Pods_NKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8231B4E7222E9A7F00FFABB0 /* DashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashTableViewCell.swift; sourceTree = "<group>"; };
 		8231B4EA222E9B9500FFABB0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		826C7401222CA68600B1B119 /* NKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,11 +32,12 @@
 		826C740B222CA68700B1B119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		826C740E222CA68700B1B119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		826C7410222CA68700B1B119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82C5B02A222E0E30000BD126 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		8281F478223B4F65007892CB /* DashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashAPI.swift; sourceTree = "<group>"; };
+		82C5B02A222E0E30000BD126 /* DashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashService.swift; sourceTree = "<group>"; };
 		82C5B02C222E0E66000BD126 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		82C5B02E222E218C000BD126 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		BD93A2C5D148D7E714477CC8 /* Pods-NKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKDemo.release.xcconfig"; path = "Target Support Files/Pods-NKDemo/Pods-NKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D1CBE521502FBC1FEC8CFC62 /* Pods-NKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKDemo.debug.xcconfig"; path = "Target Support Files/Pods-NKDemo/Pods-NKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C08240FD4020002DEF5B6713 /* Pods-NKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKDemo.debug.xcconfig"; path = "Target Support Files/Pods-NKDemo/Pods-NKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FD63DFA595A70152CF4CB7EF /* Pods-NKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKDemo.release.xcconfig"; path = "Target Support Files/Pods-NKDemo/Pods-NKDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +45,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3ACD98A75A000AB1B293E2C /* Pods_NKDemo.framework in Frameworks */,
+				7D1873DC417021297809ACEA /* Pods_NKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14BF4CE9D20D670F17A37635 /* Frameworks */ = {
+		7E1EA7F6565453FA2F6385CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58B766A13B47C1100C9F5027 /* Pods_NKDemo.framework */,
+				039D24BC00DB1228A48D191D /* Pods_NKDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,7 +71,8 @@
 		8231B4E3222E99C400FFABB0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				82C5B02A222E0E30000BD126 /* Requester.swift */,
+				8281F478223B4F65007892CB /* DashAPI.swift */,
+				82C5B02A222E0E30000BD126 /* DashService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -114,10 +117,10 @@
 		826C73F8222CA68600B1B119 = {
 			isa = PBXGroup;
 			children = (
-				826C7403222CA68600B1B119 /* Demo */,
+				826C7403222CA68600B1B119 /* NKDemo */,
 				826C7402222CA68600B1B119 /* Products */,
 				94FEC290622C18CA441896F7 /* Pods */,
-				14BF4CE9D20D670F17A37635 /* Frameworks */,
+				7E1EA7F6565453FA2F6385CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,14 +132,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		826C7403222CA68600B1B119 /* Demo */ = {
+		826C7403222CA68600B1B119 /* NKDemo */ = {
 			isa = PBXGroup;
 			children = (
 				8231B4E6222E9A0300FFABB0 /* App */,
 				82AB1439222FECE400B9E581 /* Sections */,
 				8231B4E9222E9B7800FFABB0 /* Common */,
 			);
-			path = Demo;
+			path = NKDemo;
 			sourceTree = "<group>";
 		};
 		82AB1438222FECC400B9E581 /* Dash */ = {
@@ -169,8 +172,8 @@
 		94FEC290622C18CA441896F7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D1CBE521502FBC1FEC8CFC62 /* Pods-NKDemo.debug.xcconfig */,
-				BD93A2C5D148D7E714477CC8 /* Pods-NKDemo.release.xcconfig */,
+				C08240FD4020002DEF5B6713 /* Pods-NKDemo.debug.xcconfig */,
+				FD63DFA595A70152CF4CB7EF /* Pods-NKDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -182,11 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 826C7413222CA68700B1B119 /* Build configuration list for PBXNativeTarget "NKDemo" */;
 			buildPhases = (
-				FBBE3B7FA4C781F89EE57BCB /* [CP] Check Pods Manifest.lock */,
+				C9B36B5284CCF02BC0DE41A6 /* [CP] Check Pods Manifest.lock */,
 				826C73FD222CA68600B1B119 /* Sources */,
 				826C73FE222CA68600B1B119 /* Frameworks */,
 				826C73FF222CA68600B1B119 /* Resources */,
-				843189F38566589373951503 /* [CP] Embed Pods Frameworks */,
+				815CD94FE6E127A43BFBC7EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 826C73FC222CA68600B1B119 /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = 826C73FC222CA68600B1B119 /* Build configuration list for PBXProject "NKDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -244,7 +247,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		843189F38566589373951503 /* [CP] Embed Pods Frameworks */ = {
+		815CD94FE6E127A43BFBC7EA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,7 +271,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NKDemo/Pods-NKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FBBE3B7FA4C781F89EE57BCB /* [CP] Check Pods Manifest.lock */ = {
+		C9B36B5284CCF02BC0DE41A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,9 +302,10 @@
 			files = (
 				8231B4E8222E9A7F00FFABB0 /* DashTableViewCell.swift in Sources */,
 				826C7407222CA68600B1B119 /* DashViewController.swift in Sources */,
+				8281F479223B4F65007892CB /* DashAPI.swift in Sources */,
 				826C7405222CA68600B1B119 /* AppDelegate.swift in Sources */,
 				82C5B02D222E0E66000BD126 /* Model.swift in Sources */,
-				82C5B02B222E0E30000BD126 /* Requester.swift in Sources */,
+				82C5B02B222E0E30000BD126 /* DashService.swift in Sources */,
 				8231B4EB222E9B9500FFABB0 /* UIImageView+Extensions.swift in Sources */,
 				82C5B02F222E218C000BD126 /* ViewModel.swift in Sources */,
 			);
@@ -447,11 +451,11 @@
 		};
 		826C7414222CA68700B1B119 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1CBE521502FBC1FEC8CFC62 /* Pods-NKDemo.debug.xcconfig */;
+			baseConfigurationReference = C08240FD4020002DEF5B6713 /* Pods-NKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Demo/App/Info.plist;
+				INFOPLIST_FILE = NKDemo/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,11 +470,11 @@
 		};
 		826C7415222CA68700B1B119 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD93A2C5D148D7E714477CC8 /* Pods-NKDemo.release.xcconfig */;
+			baseConfigurationReference = FD63DFA595A70152CF4CB7EF /* Pods-NKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Demo/App/Info.plist;
+				INFOPLIST_FILE = NKDemo/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +490,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		826C73FC222CA68600B1B119 /* Build configuration list for PBXProject "Demo" */ = {
+		826C73FC222CA68600B1B119 /* Build configuration list for PBXProject "NKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				826C7411222CA68700B1B119 /* Debug */,
