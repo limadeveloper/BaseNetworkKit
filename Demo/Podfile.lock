@@ -1,5 +1,5 @@
 PODS:
-  - BaseNetworkKit (1.0.2)
+  - BaseNetworkKit (1.0.3)
   - ObservableKit (1.0.1)
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ SPEC REPOS:
     - BaseNetworkKit
 
 SPEC CHECKSUMS:
-  BaseNetworkKit: 6f1d472e08d3c829f2db591d9a9351903c02dbb1
+  BaseNetworkKit: 39c092e0a1a7113a11e2d4396189d4e0698d0193
   ObservableKit: f5f914904a359cbe56afa80ea411b45d5786058f
 
 PODFILE CHECKSUM: 46043fb82ff00f6bf0aab89288f0be3806592645
