@@ -30,4 +30,13 @@ public extension URL {
       self = target.baseURL.appendingPathComponent(target.path)
     }
   }
+
+  init(stringValue: String) {
+    guard let url = URL(string: stringValue) else {
+      assertionFailure("⚠️ string value is not an URL")
+      self = URL(string: "")!
+      return
+    }
+    self = url
+  }
 }
