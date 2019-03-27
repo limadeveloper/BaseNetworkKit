@@ -58,7 +58,7 @@ public enum NKTask {
 
 public protocol NKFlowTarget {
   /// The Domain
-  var baseURL: URL! { get }
+  var baseURL: URL { get }
 
   /// The path to be appended to `baseURL` to form the full `URL`.
   var path: String { get }
@@ -74,4 +74,14 @@ public protocol NKFlowTarget {
 
   /// The app environment: `develop` or `production`
   var environment: NKEnvironment { get }
+}
+
+public extension NKFlowTarget {
+  var path: String {
+    return ""
+  }
+
+  var headers: NKCommon.HTTPHeader? {
+    return nil
+  }
 }

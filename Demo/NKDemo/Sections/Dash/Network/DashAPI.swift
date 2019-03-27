@@ -14,8 +14,8 @@ enum DashAPI {
 }
 
 extension DashAPI: NKFlowTarget {
-  var baseURL: URL! {
-    return URL(string: "https://api.twitch.tv/")
+  var baseURL: URL {
+    return URL(stringValue: "https://api.twitch.tv/")
   }
 
   var path: String {
