@@ -22,7 +22,7 @@
 
 import Foundation
 
-extension URLResponse {
+public extension URLResponse {
   enum ValidationStatus {
     case informational
     case success
