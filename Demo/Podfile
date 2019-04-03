@@ -6,6 +6,6 @@ target 'NKDemo' do
 
   # Pods for NKDemo
   pod 'ObservableKit', '~> 1.0'
-  pod 'BaseNetworkKit', '~> 1.0'
+  pod 'BaseNetworkKit', :git => 'https://github.com/limadeveloper/BaseNetworkKit.git', :branch => 'master'
 
 end
