@@ -1,29 +1,20 @@
 PODS:
-  - BaseNetworkKit (1.0.3)
+  - BaseNetworkKit (1.0.4)
   - ObservableKit (1.0.1)
 
 DEPENDENCIES:
-  - BaseNetworkKit (from `https://github.com/limadeveloper/BaseNetworkKit.git`, branch `release/1.0.4`)
+  - BaseNetworkKit (~> 1.0)
   - ObservableKit (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BaseNetworkKit
     - ObservableKit
 
-EXTERNAL SOURCES:
-  BaseNetworkKit:
-    :branch: release/1.0.4
-    :git: https://github.com/limadeveloper/BaseNetworkKit.git
-
-CHECKOUT OPTIONS:
-  BaseNetworkKit:
-    :commit: 4288672decd4c66fc89b9a21e7c96469afc56957
-    :git: https://github.com/limadeveloper/BaseNetworkKit.git
-
 SPEC CHECKSUMS:
-  BaseNetworkKit: 6a2adf307c21d3b29d5ef8821a231d22cf3c9491
+  BaseNetworkKit: f0d0795474c0c6ee4357e4d7f0e88ff69068a0a8
   ObservableKit: f5f914904a359cbe56afa80ea411b45d5786058f
 
-PODFILE CHECKSUM: 81c42fe0bc75e6a4a455b5348b5e4b8407539601
+PODFILE CHECKSUM: 936a8d5eb5c56a444bf939a29fd2054c694af0cd
 
 COCOAPODS: 1.6.1
