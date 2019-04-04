@@ -1,7 +1,10 @@
 # BaseNetworkKit
 
+[![GitHub release](https://img.shields.io/github/release/limadeveloper/BaseNetworkKit.svg)](https://github.com/limadeveloper/BaseNetworkKit/releases)
 [![Build Status](https://travis-ci.com/limadeveloper/BaseNetworkKit.svg?token=HzevNmMEwiqbuyePKWyP&branch=master)](https://travis-ci.com/limadeveloper/BaseNetworkKit)
 [![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/BaseNetworkKit)
+[![GitHub repo size](https://img.shields.io/github/repo-size/limadeveloper/BaseNetworkKit.svg)](https://github.com/limadeveloper/BaseNetworkKit)
+[![License](https://img.shields.io/github/license/limadeveloper/BaseNetworkKit.svg)](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE)
 
 **BaseNetworkKit** is the easiest way to create your network layer in Swift.
 
