@@ -78,7 +78,7 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
     }
 
     if let httpResponse = response as? HTTPURLResponse {
-      print("\n============== RESPONSE ==============")
+      print("\n================ RESPONSE ================")
       switch httpResponse.statusCode {
       case 200...202:
         print("✅ CODE: \(httpResponse.statusCode)")
@@ -100,7 +100,7 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
     }
 
     if let urlError = error as? URLError {
-      print("\n=============== ERROR ===============")
+      print("\n================ ERROR ================")
       print("❌ CODE: \(urlError.errorCode)")
       print("❌ DESCRIPTION: \(urlError.localizedDescription)\n")
     }
