@@ -37,7 +37,7 @@ extension NKCodable {
       self = object
     } catch {
       if NKManager.shared.environment == .develop {
-        print("⚠️ error: \(error)")
+        print("⚠️ error: \(error.localizedDescription)")
       }
       return nil
     }
@@ -50,7 +50,7 @@ extension NKCodable {
       self = object
     } catch {
       if NKManager.shared.environment == .develop {
-        print("⚠️ error: \(error)")
+        print("⚠️ error: \(error.localizedDescription)")
       }
       return nil
     }
