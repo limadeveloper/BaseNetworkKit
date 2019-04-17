@@ -33,7 +33,7 @@ open class NKBaseService<T: NKFlowTarget> {
   // MARK: - Public Methods
   public func fetch(_ target: T, completion: NKCommon.CompletionHandlerPlain) {
     provider.request(target) { data, response, error in
-      if let e = self.checkForErrors(data, error: error) {
+      if let e = self.checkForErrors(data, error: error, response: response) {
         completion?(response, e)
         return
       }
@@ -45,7 +45,7 @@ open class NKBaseService<T: NKFlowTarget> {
                                       dataType: Value.Type,
                                       completion: NKCommon.CompletionHandler<Value>) {
     provider.request(target) { data, response, error in
-      if let e = self.checkForErrors(data, error: error) {
+      if let e = self.checkForErrors(data, error: error, response: response) {
         completion?(nil, response, e)
         return
       }
@@ -58,13 +58,16 @@ open class NKBaseService<T: NKFlowTarget> {
       completion?(model, response, nil)
     }
   }
-
+  
   // MARK: - Private Methods
-  private func checkForErrors(_ data: Data?, error: NKFlowError? = nil) -> NKError? {
+  private func checkForErrors(_ data: Data?, error: NKFlowError? = nil, response: URLResponse? = nil) -> NKError? {
     if let error = error, let networkError = error.underlyingError {
       return NKError.network(networkError)
     }
-    if let responseData = data, let apiResponse = NKAPIErrorResponse(responseData), let apiError = apiResponse.error {
+    if response?.validationStatus != .success,
+      let responseData = data,
+      let apiResponse = NKAPIErrorResponse(responseData),
+      let apiError = apiResponse.error {
       let error = NKError.api(apiError)
       return error
     }
