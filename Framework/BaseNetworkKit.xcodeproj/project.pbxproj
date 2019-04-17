@@ -20,6 +20,7 @@
 		82C1B2CB222C287F00B677AA /* NKFlowRequestComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BF222C287F00B677AA /* NKFlowRequestComposer.swift */; };
 		82C1B2CE222C28FB00B677AA /* NKFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2CD222C28FB00B677AA /* NKFlowError.swift */; };
 		82C1B2D0222C325B00B677AA /* NKEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2CF222C325A00B677AA /* NKEncodable.swift */; };
+		82C269022266B82D00B3ADE1 /* NKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C269012266B82D00B3ADE1 /* NKManager.swift */; };
 		82CEE2D2222B107400F3155D /* BaseNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 82CEE2D0222B107400F3155D /* BaseNetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82CEE2FC222B13E800F3155D /* NKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE2EA222B13E800F3155D /* NKError.swift */; };
 		82CEE2FE222B13E800F3155D /* NKBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE2EC222B13E800F3155D /* NKBaseService.swift */; };
@@ -43,6 +44,7 @@
 		82C1B2BF222C287F00B677AA /* NKFlowRequestComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowRequestComposer.swift; sourceTree = "<group>"; };
 		82C1B2CD222C28FB00B677AA /* NKFlowError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowError.swift; sourceTree = "<group>"; };
 		82C1B2CF222C325A00B677AA /* NKEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKEncodable.swift; sourceTree = "<group>"; };
+		82C269012266B82D00B3ADE1 /* NKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKManager.swift; sourceTree = "<group>"; };
 		82CEE2CD222B107400F3155D /* BaseNetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CEE2D0222B107400F3155D /* BaseNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNetworkKit.h; sourceTree = "<group>"; };
 		82CEE2D1222B107400F3155D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		82CEE2D8222B119700F3155D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				82C269012266B82D00B3ADE1 /* NKManager.swift */,
 				82CEE306222B1EF400F3155D /* NKEnvironment.swift */,
 				82C1B2B1222C133400B677AA /* NKCommon.swift */,
 				82CEE300222B17F300F3155D /* NKCodable.swift */,
@@ -222,6 +225,7 @@
 			files = (
 				82CEE301222B17F300F3155D /* NKCodable.swift in Sources */,
 				82C1B2C9222C287F00B677AA /* NKFlowTarget.swift in Sources */,
+				82C269022266B82D00B3ADE1 /* NKManager.swift in Sources */,
 				82CEE2FC222B13E800F3155D /* NKError.swift in Sources */,
 				82C1B2C8222C287F00B677AA /* NKFlowRequesterExecutor.swift in Sources */,
 				82C1B2CA222C287F00B677AA /* NKFlowRequester.swift in Sources */,
