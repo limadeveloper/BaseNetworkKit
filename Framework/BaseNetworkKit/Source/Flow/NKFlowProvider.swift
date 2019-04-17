@@ -35,6 +35,7 @@ open class NKFlowProvider<Target: NKFlowTarget>: NKFlowProviderProtocol {
   }
 
   public func request(_ target: Target, completion: @escaping NKCommon.CompletionResult) {
+    NKManager.shared.environment = target.environment
     requester.debugMode = target.environment == .develop ? .verbose : .silent
     do {
       let request = try NKFlowRequestComposer.create(target)
