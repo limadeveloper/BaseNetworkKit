@@ -36,6 +36,9 @@ extension NKCodable {
       let object = try JSONDecoder().decode(Self.self, from: data)
       self = object
     } catch {
+      if NKManager.shared.environment == .develop {
+        print("⚠️ error: \(error)")
+      }
       return nil
     }
   }
@@ -46,6 +49,9 @@ extension NKCodable {
       let object = try decoder.decode(Self.self, from: data)
       self = object
     } catch {
+      if NKManager.shared.environment == .develop {
+        print("⚠️ error: \(error)")
+      }
       return nil
     }
   }
