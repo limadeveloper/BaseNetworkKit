@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BaseNetworkKit:
-    :commit: bc4fa72d93b32e5343384c8845d3652c6119270b
+    :commit: 8c9d647b7aa46394f999973a4899b3799c9a9c04
     :git: https://github.com/limadeveloper/BaseNetworkKit.git
 
 SPEC CHECKSUMS:
