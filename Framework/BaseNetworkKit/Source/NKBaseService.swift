@@ -34,10 +34,10 @@ open class NKBaseService<T: NKFlowTarget> {
   public func fetch(_ target: T, completion: NKCommon.CompletionHandlerPlain) {
     provider.request(target) { data, response, error in
       if let e = self.checkForErrors(data, error: error, response: response) {
-        completion?(response, e)
+        completion?(nil, response, e)
         return
       }
-      completion?(response, nil)
+      completion?(data, response, nil)
     }
   }
 

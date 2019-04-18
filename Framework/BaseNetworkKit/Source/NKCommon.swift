@@ -28,5 +28,5 @@ public struct NKCommon {
   public typealias Completion<Value> = (_ success: Value?, _ error: Error?) -> Void
   public typealias CompletionResult = (_ result: Data?, _ response: URLResponse?, _ error: NKFlowError?) -> Void
   public typealias CompletionHandler<Value> = ((_ object: Value?, _ response: URLResponse?, _ error: NKError?) -> Void)?
-  public typealias CompletionHandlerPlain = ((_ response: URLResponse?, _ error: NKError?) -> Void)?
+  public typealias CompletionHandlerPlain = ((_ result: Data?, _ response: URLResponse?, _ error: NKError?) -> Void)?
 }
