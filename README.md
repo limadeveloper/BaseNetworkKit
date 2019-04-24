@@ -7,7 +7,8 @@
 [![License](https://img.shields.io/github/license/limadeveloper/BaseNetworkKit.svg)](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/ObservableKit.svg?style=flat)](https://developer.apple.com/ios/)
 
-**BaseNetworkKit** is the easiest way to create your network layer in Swift.
+**BaseNetworkKit** is the easiest way to create your network layer in Swift.  
+Inspired by [Moya](https://moya.github.io)
 
 ## Requirements
 
