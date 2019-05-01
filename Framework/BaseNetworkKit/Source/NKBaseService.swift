@@ -41,6 +41,16 @@ open class NKBaseService<T: NKFlowTarget> {
     }
   }
 
+  public func fetch(_ target: T, result: @escaping NKCommon.ResultType<Data>) {
+    fetch(target) { data, response, error in
+      if let data = data, let response = response {
+        result(.success((response, data)))
+      } else {
+        result(.failure(error ?? NKFlowError.noFound))
+      }
+    }
+  }
+
   public func fetch<Value: NKCodable>(_ target: T,
                                       dataType: Value.Type,
                                       completion: NKCommon.CompletionHandler<Value>) {
@@ -56,6 +66,18 @@ open class NKBaseService<T: NKFlowTarget> {
         return
       }
       completion?(model, response, nil)
+    }
+  }
+
+  public func fetch<Value: NKCodable>(_ target: T,
+                                      dataType: Value.Type,
+                                      result: @escaping NKCommon.ResultType<Value>) {
+    fetch(target, dataType: dataType) { value, response, error in
+      if let value = value, let response = response {
+        result(.success((response, value)))
+      } else {
+        result(.failure(error ?? NKFlowError.noFound))
+      }
     }
   }
   
