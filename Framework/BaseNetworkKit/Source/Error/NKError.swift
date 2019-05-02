@@ -23,17 +23,17 @@
 import Foundation
 
 // MARK: - Protocols
-public enum NKErrorMessage: String {
-  case unknown = "Something wrong, try again later."
-  case network = "No connection"
-}
-
 protocol NKErrorProtocol: LocalizedError {
   var code: Int { get }
   var message: String { get }
 }
 
 // MARK: - Enums
+public enum NKErrorMessage: String {
+  case unknown = "Something wrong, try again later."
+  case network = "No connection"
+}
+
 public enum NKErrorCode: Int {
   case generic = 99998
   case withoutInternet = -1009
@@ -81,6 +81,22 @@ extension NKError: NKErrorProtocol {
     case .parse:
       return NKErrorMessage.unknown.rawValue
     }
+  }
+
+  static func checkForErrors(_ data: Data?,
+                             error: Error? = nil,
+                             response: URLResponse? = nil) -> NKError? {
+    if let error = error as? NKFlowError, let networkError = error.underlyingError {
+      return NKError.network(networkError)
+    }
+    if response?.validationStatus != .success,
+      let responseData = data,
+      let apiResponse = NKAPIErrorResponse(responseData),
+      let apiError = apiResponse.error {
+      let error = NKError.api(apiError)
+      return error
+    }
+    return nil
   }
 }
 
