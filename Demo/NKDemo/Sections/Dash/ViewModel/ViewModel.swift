@@ -11,28 +11,26 @@ import ObservableKit
 
 class ViewModel {
 
+  // MARK: - Properties
   private let requester = DashService()
 
   let observable: OKObservable<OKState<Model>> = OKObservable(.loading)
   var items: [Model.GameModel] = []
 
+  // MARK: - Public Methods
   func fetchData() {
     self.observable.value = .loading
     self.items = []
-    requester.fetchGames(page: 0, limit: 30) { model, error in
-      if let error = error {
+    requester.fetchGames(page: 0, limit: 30) { result in
+      switch result {
+      case .success(_, let model):
+        let games = model.topGames
+        self.items = games
+        self.observable.value = .load(data: model)
+      case .failure(let error):
         self.items = []
         self.observable.value = .errored(error: error)
-        return
       }
-      guard let model = model else {
-        self.items = []
-        self.observable.value = .empty
-        return
-      }
-      let games = model.topGames
-      self.items = games
-      self.observable.value = .load(data: model)
     }
   }
 }
