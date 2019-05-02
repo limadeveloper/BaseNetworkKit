@@ -32,7 +32,7 @@ enum NKFlowDebugMode {
 // MARK: - Protocols
 protocol NKFlowRequesterExecutorProtocol {
   var debugMode: NKFlowDebugMode { get set }
-  func execute(request: URLRequest, in session: URLSession, completion: NKCommon.CompletionResult?)
+  func execute(request: URLRequest, in session: URLSession, completion: @escaping NKCommon.ResultType<Data>)
 }
 
 class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
@@ -41,16 +41,20 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
   var debugMode: NKFlowDebugMode = .silent
 
   // MARK: - Public Methods
-  func execute(request: URLRequest, in session: URLSession, completion: NKCommon.CompletionResult?) {
+  func execute(request: URLRequest, in session: URLSession, completion: @escaping NKCommon.ResultType<Data>) {
     session.dataTask(with: request) { data, response, error in
       if self.debugMode == .verbose {
         self.debugResponse(request, data, response, error)
       }
       if let e = error {
-        completion?(data, response, NKFlowError.network(e))
-        return
+        completion(.failure(NKFlowError.network(e)))
+      } else if let e = NKError.checkForErrors(data, error: error, response: response) {
+        completion(.failure(e))
+      } else if let data = data, let response = response {
+        completion(.success((response, data)))
+      } else {
+        completion(.failure(NKFlowError.noFound))
       }
-      completion?(data, response, nil)
     }.resume()
     session.finishTasksAndInvalidate()
   }

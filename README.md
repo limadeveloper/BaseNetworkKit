@@ -95,12 +95,10 @@ extension RequesterAPI: NKFlowTarget {
 Than, create a request function
 
 ```swift
-final class Requester: NKBaseService<RequesterAPI> {
-  func fetchGames(page: Int, limit: Int, completion: @escaping NKCommon.Completion<Model>) {
+class DashService: NKBaseService<DashAPI> {
+  func fetchGames(page: Int, limit: Int, completion: @escaping NKCommon.ResultType<Model>) {
     let requestModel = ModelRequest(offset: "\(page)", limit: "\(limit)")
-    fetch(.topGames(requestModel), dataType: Model.self) { result, _, error in
-      completion(result, error)
-    }
+    fetch(.topGames(requestModel), dataType: Model.self, completion: completion)
   }
 }
 ```

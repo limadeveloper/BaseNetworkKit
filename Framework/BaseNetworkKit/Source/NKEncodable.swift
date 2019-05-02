@@ -23,7 +23,6 @@
 import Foundation
 
 struct NKEncodable: Encodable {
-
   private let encodable: Encodable
 
   public init(_ encodable: Encodable) {
