@@ -31,68 +31,25 @@ open class NKBaseService<T: NKFlowTarget> {
   public init() {}
 
   // MARK: - Public Methods
-  public func fetch(_ target: T, completion: NKCommon.CompletionHandlerPlain) {
-    provider.request(target) { data, response, error in
-      if let e = self.checkForErrors(data, error: error, response: response) {
-        completion?(nil, response, e)
-        return
-      }
-      completion?(data, response, nil)
-    }
-  }
-
-  public func fetch(_ target: T, result: @escaping NKCommon.ResultType<Data>) {
-    fetch(target) { data, response, error in
-      if let data = data, let response = response {
-        result(.success((response, data)))
-      } else {
-        result(.failure(error ?? NKFlowError.noFound))
-      }
-    }
+  public func fetch(_ target: T, completion: @escaping NKCommon.ResultType<Data>) {
+    provider.request(target, completion: completion)
   }
 
   public func fetch<Value: NKCodable>(_ target: T,
                                       dataType: Value.Type,
-                                      completion: NKCommon.CompletionHandler<Value>) {
-    provider.request(target) { data, response, error in
-      if let e = self.checkForErrors(data, error: error, response: response) {
-        completion?(nil, response, e)
-        return
-      }
-      guard let data = data, let model = dataType.init(data) else {
-        let error = NKFlowError.noFound
-        let e = NKError.parse(error)
-        completion?(nil, response, e)
-        return
-      }
-      completion?(model, response, nil)
-    }
-  }
-
-  public func fetch<Value: NKCodable>(_ target: T,
-                                      dataType: Value.Type,
-                                      result: @escaping NKCommon.ResultType<Value>) {
-    fetch(target, dataType: dataType) { value, response, error in
-      if let value = value, let response = response {
-        result(.success((response, value)))
-      } else {
-        result(.failure(error ?? NKFlowError.noFound))
+                                      completion: @escaping NKCommon.ResultType<Value>) {
+    provider.request(target) { result in
+      switch result {
+      case .success(let response, let data):
+        guard let value = dataType.init(data) else {
+          let e = NKError.parse(NKFlowError.noFound)
+          completion(.failure(e))
+          return
+        }
+        completion(.success((response, value)))
+      case .failure(let error):
+        completion(.failure(error))
       }
     }
-  }
-  
-  // MARK: - Private Methods
-  private func checkForErrors(_ data: Data?, error: NKFlowError? = nil, response: URLResponse? = nil) -> NKError? {
-    if let error = error, let networkError = error.underlyingError {
-      return NKError.network(networkError)
-    }
-    if response?.validationStatus != .success,
-      let responseData = data,
-      let apiResponse = NKAPIErrorResponse(responseData),
-      let apiError = apiResponse.error {
-      let error = NKError.api(apiError)
-      return error
-    }
-    return nil
   }
 }
