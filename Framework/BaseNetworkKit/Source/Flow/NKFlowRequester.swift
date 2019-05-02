@@ -67,12 +67,8 @@ open class NKFlowRequester: NSObject {
   }
 
   // MARK: - Public Methods
-  func perform(_ request: URLRequest,
-               completion: @escaping (_ responseData: Data?, _ response: URLResponse?, _ error: NKFlowError?) -> Void) {
+  func perform(_ request: URLRequest, completion: @escaping NKCommon.ResultType<Data>) {
     let session = URLSession(configuration: sessionConfiguration)
-    executor.execute(request: request, in: session) { responseData, response, error in
-      completion(responseData, response, error)
-    }
-    session.finishTasksAndInvalidate()
+    executor.execute(request: request, in: session, completion: completion)
   }
 }

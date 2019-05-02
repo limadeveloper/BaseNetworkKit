@@ -24,7 +24,7 @@ import Foundation
 
 public protocol NKFlowProviderProtocol: AnyObject {
   associatedtype Target: NKFlowTarget
-  func request(_ target: Target, completion: @escaping NKCommon.CompletionResult)
+  func request(_ target: Target, completion: @escaping NKCommon.ResultType<Data>)
 }
 
 open class NKFlowProvider<Target: NKFlowTarget>: NKFlowProviderProtocol {
@@ -34,16 +34,14 @@ open class NKFlowProvider<Target: NKFlowTarget>: NKFlowProviderProtocol {
     self.requester = requester
   }
 
-  public func request(_ target: Target, completion: @escaping NKCommon.CompletionResult) {
+  public func request(_ target: Target, completion: @escaping NKCommon.ResultType<Data>) {
     NKManager.shared.environment = target.environment
     requester.debugMode = target.environment == .develop ? .verbose : .silent
     do {
       let request = try NKFlowRequestComposer.create(target)
-      requester.perform(request) { responseData, response, error in
-        completion(responseData, response, error)
-      }
+      requester.perform(request, completion: completion)
     } catch {
-      completion(nil, nil, NKFlowError.invalidRequest(error))
+      completion(.failure(NKFlowError.invalidRequest(error)))
     }
   }
 }

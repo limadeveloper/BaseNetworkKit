@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -136,10 +136,10 @@
 		82CEE303222B1C4B00F3155D /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				82CEE2EA222B13E800F3155D /* NKError.swift */,
 				82C1B2CD222C28FB00B677AA /* NKFlowError.swift */,
 				82CEE304222B1C5E00F3155D /* NKAPIErrorResponse.swift */,
 				82CEE2ED222B13E800F3155D /* NKAPIError.swift */,
-				82CEE2EA222B13E800F3155D /* NKError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = limadeveloper;
+				ORGANIZATIONNAME = thejohnlima;
 				TargetAttributes = {
 					82CEE2CC222B107400F3155D = {
 						CreatedOnToolsVersion = 10.2;
@@ -192,7 +192,7 @@
 				};
 			};
 			buildConfigurationList = 82CEE2C7222B107400F3155D /* Build configuration list for PBXProject "BaseNetworkKit" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
