@@ -54,14 +54,14 @@ public enum NKError: Error {
 
 // MARK: - Extensions
 extension NKError: NKErrorProtocol {
-  var message: String {
+  public var message: String {
     return localizedDescription
   }
 
   public var code: Int {
     switch self {
     case .api(let error):
-      return error.code
+      return error.code ?? 0
     case .network(let error):
       guard let e = error as? URLError else {
         return NKErrorCode.connectionLost.rawValue
@@ -89,13 +89,27 @@ extension NKError: NKErrorProtocol {
     if let error = error as? NKFlowError, let networkError = error.underlyingError {
       return NKError.network(networkError)
     }
+
     if response?.validationStatus != .success,
       let responseData = data,
-      let apiResponse = NKAPIErrorResponse(responseData),
-      let apiError = apiResponse.error {
+      let apiError = getAPIError(responseData) {
       let error = NKError.api(apiError)
       return error
     }
+
+    return nil
+  }
+
+  static func getAPIError(_ data: Data) -> NKAPIError? {
+    let apiResponse = NKAPIErrorResponse(data)
+    let apiError = NKAPIError(data)
+
+    if let apiError = apiError {
+      return apiError
+    } else if let apiResponse = apiResponse {
+      return apiResponse.error
+    }
+
     return nil
   }
 }

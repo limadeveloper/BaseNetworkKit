@@ -23,22 +23,14 @@
 public struct NKAPIError: NKCodable {
 
   // MARK: - Properties
-  let code: Int
+  var code: Int?
   let message: String
 
   // MARK: - Enums
   public enum CodingKeys: String, CodingKey {
     case code, message
   }
-
-  // MARK: - Initializers
-  public init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    let stringCode = try container.decode(String.self, forKey: .code)
-    code = Int(stringCode) ?? NKErrorCode.unknown.rawValue
-    message = try container.decode(String.self, forKey: .message)
-  }
-
+  
   // MARK: - Public Methods
   public func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
