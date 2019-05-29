@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name               = "BaseNetworkKit"
-  s.version            = "1.0.6"
+  s.version            = "1.0.7"
   s.summary            = "BaseNetworkKit is the easiest way to create your network layer in Swift"
   s.requires_arc       = true
   s.homepage           = "https://github.com/limadeveloper/BaseNetworkKit"
@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.platform           = :ios, "9.3"
   s.source             = { :git => "https://github.com/limadeveloper/BaseNetworkKit.git", :tag => "#{s.version}" }
   s.source_files       = "Framework/BaseNetworkKit/Source/**/*.{swift}"
-  s.swift_version      = "4.0"
+  s.swift_version      = "4.1"
 end

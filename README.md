@@ -13,7 +13,7 @@ Inspired by [Moya](https://moya.github.io)
 ## Requirements
 
 - iOS 9.3+
-- Swift 4.0+
+- Swift 4.1+
 
 ## Installation
 
