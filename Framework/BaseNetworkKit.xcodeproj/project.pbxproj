@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BD04DB622BDF37A005A487F /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD04DB522BDF37A005A487F /* Collection+Extensions.swift */; };
 		82C1B2B2222C133400B677AA /* NKCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B1222C133400B677AA /* NKCommon.swift */; };
 		82C1B2C2222C287F00B677AA /* NKFlowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B5222C287F00B677AA /* NKFlowProvider.swift */; };
 		82C1B2C3222C287F00B677AA /* NKFlowMultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B6222C287F00B677AA /* NKFlowMultipartFormData.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BD04DB522BDF37A005A487F /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		82C1B2B1222C133400B677AA /* NKCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKCommon.swift; sourceTree = "<group>"; };
 		82C1B2B5222C287F00B677AA /* NKFlowProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowProvider.swift; sourceTree = "<group>"; };
 		82C1B2B6222C287F00B677AA /* NKFlowMultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowMultipartFormData.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				82C1B2B9222C287F00B677AA /* URLRequest+Multipart.swift */,
 				82C1B2BA222C287F00B677AA /* URL+Flow.swift */,
 				82C1B2BB222C287F00B677AA /* URLRequest+Encode.swift */,
+				1BD04DB522BDF37A005A487F /* Collection+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 82CEE2C3222B107400F3155D;
 			productRefGroup = 82CEE2CE222B107400F3155D /* Products */;
@@ -225,6 +229,7 @@
 			files = (
 				82CEE301222B17F300F3155D /* NKCodable.swift in Sources */,
 				82C1B2C9222C287F00B677AA /* NKFlowTarget.swift in Sources */,
+				1BD04DB622BDF37A005A487F /* Collection+Extensions.swift in Sources */,
 				82C269022266B82D00B3ADE1 /* NKManager.swift in Sources */,
 				82CEE2FC222B13E800F3155D /* NKError.swift in Sources */,
 				82C1B2C8222C287F00B677AA /* NKFlowRequesterExecutor.swift in Sources */,
