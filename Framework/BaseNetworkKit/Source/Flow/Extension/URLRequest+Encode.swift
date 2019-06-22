@@ -46,7 +46,12 @@ extension URLRequest {
         if self.value(forHTTPHeaderField: "Content-Type") == nil {
           self.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
-        httpBody = comps?.percentEncodedQuery?.data(using: .utf8)
+        switch paramEncode {
+        case .formData:
+          httpBody = composeFormData(parameters)
+        default:
+          httpBody = comps?.percentEncodedQuery?.data(using: .utf8)
+        }
       }
       return self
     } catch {
@@ -97,5 +102,31 @@ extension URLRequest {
     let queryItems = queryParameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
     components?.queryItems = queryItems
     return components
+  }
+
+  /// Get form data from current parameters
+  /// - Parameter parameters: request parameters
+  private func composeFormData(_ parameters: NKCommon.JSON) -> Data {
+    let postData = NSMutableData()
+    var i = 0
+    for item in parameters {
+      var value: Any {
+        if let collection = item.value as? [AnyHashable: Any], let json = collection.nkJSON {
+          return json
+        } else if let collection = item.value as? [Any], let json = collection.nkJSON {
+          return json
+        } else {
+          return item.value
+        }
+      }
+      var param = "&\(item.key)=\(value)"
+      if i == 0 {
+        param = "\(item.key)=\(value)"
+      }
+      i += 1
+      guard let data = param.data(using: .utf8) else { continue }
+      postData.append(data)
+    }
+    return postData as Data
   }
 }
