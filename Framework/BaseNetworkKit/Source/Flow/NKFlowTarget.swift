@@ -34,6 +34,7 @@ public enum NKHTTPMethods: String {
 public enum NKParameterEncoding {
   case queryString
   case httpBody
+  case formData
 }
 
 public enum NKTask {
