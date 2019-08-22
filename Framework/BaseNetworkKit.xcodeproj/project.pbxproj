@@ -7,55 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BD04DB622BDF37A005A487F /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD04DB522BDF37A005A487F /* Collection+Extensions.swift */; };
-		82C1B2B2222C133400B677AA /* NKCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B1222C133400B677AA /* NKCommon.swift */; };
-		82C1B2C2222C287F00B677AA /* NKFlowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B5222C287F00B677AA /* NKFlowProvider.swift */; };
-		82C1B2C3222C287F00B677AA /* NKFlowMultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B6222C287F00B677AA /* NKFlowMultipartFormData.swift */; };
-		82C1B2C4222C287F00B677AA /* URLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B8222C287F00B677AA /* URLResponse+StatusCode.swift */; };
-		82C1B2C5222C287F00B677AA /* URLRequest+Multipart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2B9222C287F00B677AA /* URLRequest+Multipart.swift */; };
-		82C1B2C6222C287F00B677AA /* URL+Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BA222C287F00B677AA /* URL+Flow.swift */; };
-		82C1B2C7222C287F00B677AA /* URLRequest+Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BB222C287F00B677AA /* URLRequest+Encode.swift */; };
-		82C1B2C8222C287F00B677AA /* NKFlowRequesterExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BC222C287F00B677AA /* NKFlowRequesterExecutor.swift */; };
-		82C1B2C9222C287F00B677AA /* NKFlowTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BD222C287F00B677AA /* NKFlowTarget.swift */; };
-		82C1B2CA222C287F00B677AA /* NKFlowRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BE222C287F00B677AA /* NKFlowRequester.swift */; };
-		82C1B2CB222C287F00B677AA /* NKFlowRequestComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2BF222C287F00B677AA /* NKFlowRequestComposer.swift */; };
-		82C1B2CE222C28FB00B677AA /* NKFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2CD222C28FB00B677AA /* NKFlowError.swift */; };
-		82C1B2D0222C325B00B677AA /* NKEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1B2CF222C325A00B677AA /* NKEncodable.swift */; };
-		82C269022266B82D00B3ADE1 /* NKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C269012266B82D00B3ADE1 /* NKManager.swift */; };
+		1B5217F8230EC604000E0BD6 /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 1B5217F7230EC604000E0BD6 /* Sources */; };
 		82CEE2D2222B107400F3155D /* BaseNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 82CEE2D0222B107400F3155D /* BaseNetworkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82CEE2FC222B13E800F3155D /* NKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE2EA222B13E800F3155D /* NKError.swift */; };
-		82CEE2FE222B13E800F3155D /* NKBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE2EC222B13E800F3155D /* NKBaseService.swift */; };
-		82CEE2FF222B13E800F3155D /* NKAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE2ED222B13E800F3155D /* NKAPIError.swift */; };
-		82CEE301222B17F300F3155D /* NKCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE300222B17F300F3155D /* NKCodable.swift */; };
-		82CEE305222B1C5E00F3155D /* NKAPIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE304222B1C5E00F3155D /* NKAPIErrorResponse.swift */; };
-		82CEE307222B1EF400F3155D /* NKEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEE306222B1EF400F3155D /* NKEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1BD04DB522BDF37A005A487F /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
-		82C1B2B1222C133400B677AA /* NKCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKCommon.swift; sourceTree = "<group>"; };
-		82C1B2B5222C287F00B677AA /* NKFlowProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowProvider.swift; sourceTree = "<group>"; };
-		82C1B2B6222C287F00B677AA /* NKFlowMultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowMultipartFormData.swift; sourceTree = "<group>"; };
-		82C1B2B8222C287F00B677AA /* URLResponse+StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLResponse+StatusCode.swift"; sourceTree = "<group>"; };
-		82C1B2B9222C287F00B677AA /* URLRequest+Multipart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Multipart.swift"; sourceTree = "<group>"; };
-		82C1B2BA222C287F00B677AA /* URL+Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Flow.swift"; sourceTree = "<group>"; };
-		82C1B2BB222C287F00B677AA /* URLRequest+Encode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encode.swift"; sourceTree = "<group>"; };
-		82C1B2BC222C287F00B677AA /* NKFlowRequesterExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowRequesterExecutor.swift; sourceTree = "<group>"; };
-		82C1B2BD222C287F00B677AA /* NKFlowTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowTarget.swift; sourceTree = "<group>"; };
-		82C1B2BE222C287F00B677AA /* NKFlowRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowRequester.swift; sourceTree = "<group>"; };
-		82C1B2BF222C287F00B677AA /* NKFlowRequestComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowRequestComposer.swift; sourceTree = "<group>"; };
-		82C1B2CD222C28FB00B677AA /* NKFlowError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFlowError.swift; sourceTree = "<group>"; };
-		82C1B2CF222C325A00B677AA /* NKEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKEncodable.swift; sourceTree = "<group>"; };
-		82C269012266B82D00B3ADE1 /* NKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKManager.swift; sourceTree = "<group>"; };
+		1B5217F7230EC604000E0BD6 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sources; path = ../../Sources; sourceTree = "<group>"; };
 		82CEE2CD222B107400F3155D /* BaseNetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseNetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CEE2D0222B107400F3155D /* BaseNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNetworkKit.h; sourceTree = "<group>"; };
 		82CEE2D1222B107400F3155D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82CEE2EA222B13E800F3155D /* NKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKError.swift; sourceTree = "<group>"; };
-		82CEE2EC222B13E800F3155D /* NKBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKBaseService.swift; sourceTree = "<group>"; };
-		82CEE2ED222B13E800F3155D /* NKAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKAPIError.swift; sourceTree = "<group>"; };
-		82CEE300222B17F300F3155D /* NKCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKCodable.swift; sourceTree = "<group>"; };
-		82CEE304222B1C5E00F3155D /* NKAPIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAPIErrorResponse.swift; sourceTree = "<group>"; };
-		82CEE306222B1EF400F3155D /* NKEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,32 +29,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		82C1B2B3222C287F00B677AA /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				82C1B2B5222C287F00B677AA /* NKFlowProvider.swift */,
-				82C1B2BE222C287F00B677AA /* NKFlowRequester.swift */,
-				82C1B2BF222C287F00B677AA /* NKFlowRequestComposer.swift */,
-				82C1B2BD222C287F00B677AA /* NKFlowTarget.swift */,
-				82C1B2BC222C287F00B677AA /* NKFlowRequesterExecutor.swift */,
-				82C1B2B6222C287F00B677AA /* NKFlowMultipartFormData.swift */,
-				82C1B2B7222C287F00B677AA /* Extension */,
-			);
-			path = Flow;
-			sourceTree = "<group>";
-		};
-		82C1B2B7222C287F00B677AA /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				82C1B2B8222C287F00B677AA /* URLResponse+StatusCode.swift */,
-				82C1B2B9222C287F00B677AA /* URLRequest+Multipart.swift */,
-				82C1B2BA222C287F00B677AA /* URL+Flow.swift */,
-				82C1B2BB222C287F00B677AA /* URLRequest+Encode.swift */,
-				1BD04DB522BDF37A005A487F /* Collection+Extensions.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		82CEE2C3222B107400F3155D = {
 			isa = PBXGroup;
 			children = (
@@ -116,35 +50,9 @@
 			children = (
 				82CEE2D0222B107400F3155D /* BaseNetworkKit.h */,
 				82CEE2D1222B107400F3155D /* Info.plist */,
-				82CEE2D8222B119700F3155D /* Source */,
+				1B5217F7230EC604000E0BD6 /* Sources */,
 			);
 			path = BaseNetworkKit;
-			sourceTree = "<group>";
-		};
-		82CEE2D8222B119700F3155D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				82C269012266B82D00B3ADE1 /* NKManager.swift */,
-				82CEE306222B1EF400F3155D /* NKEnvironment.swift */,
-				82C1B2B1222C133400B677AA /* NKCommon.swift */,
-				82CEE300222B17F300F3155D /* NKCodable.swift */,
-				82C1B2CF222C325A00B677AA /* NKEncodable.swift */,
-				82CEE2EC222B13E800F3155D /* NKBaseService.swift */,
-				82CEE303222B1C4B00F3155D /* Error */,
-				82C1B2B3222C287F00B677AA /* Flow */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		82CEE303222B1C4B00F3155D /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				82CEE2EA222B13E800F3155D /* NKError.swift */,
-				82C1B2CD222C28FB00B677AA /* NKFlowError.swift */,
-				82CEE304222B1C5E00F3155D /* NKAPIErrorResponse.swift */,
-				82CEE2ED222B13E800F3155D /* NKAPIError.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5217F8230EC604000E0BD6 /* Sources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,27 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82CEE301222B17F300F3155D /* NKCodable.swift in Sources */,
-				82C1B2C9222C287F00B677AA /* NKFlowTarget.swift in Sources */,
-				1BD04DB622BDF37A005A487F /* Collection+Extensions.swift in Sources */,
-				82C269022266B82D00B3ADE1 /* NKManager.swift in Sources */,
-				82CEE2FC222B13E800F3155D /* NKError.swift in Sources */,
-				82C1B2C8222C287F00B677AA /* NKFlowRequesterExecutor.swift in Sources */,
-				82C1B2CA222C287F00B677AA /* NKFlowRequester.swift in Sources */,
-				82CEE305222B1C5E00F3155D /* NKAPIErrorResponse.swift in Sources */,
-				82CEE307222B1EF400F3155D /* NKEnvironment.swift in Sources */,
-				82CEE2FE222B13E800F3155D /* NKBaseService.swift in Sources */,
-				82C1B2D0222C325B00B677AA /* NKEncodable.swift in Sources */,
-				82C1B2C6222C287F00B677AA /* URL+Flow.swift in Sources */,
-				82C1B2C7222C287F00B677AA /* URLRequest+Encode.swift in Sources */,
-				82C1B2B2222C133400B677AA /* NKCommon.swift in Sources */,
-				82C1B2CE222C28FB00B677AA /* NKFlowError.swift in Sources */,
-				82CEE2FF222B13E800F3155D /* NKAPIError.swift in Sources */,
-				82C1B2C5222C287F00B677AA /* URLRequest+Multipart.swift in Sources */,
-				82C1B2C3222C287F00B677AA /* NKFlowMultipartFormData.swift in Sources */,
-				82C1B2C2222C287F00B677AA /* NKFlowProvider.swift in Sources */,
-				82C1B2C4222C287F00B677AA /* URLResponse+StatusCode.swift in Sources */,
-				82C1B2CB222C287F00B677AA /* NKFlowRequestComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +284,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
-				PRODUCT_BUNDLE_IDENTIFIER = limadeveloper.basenetworkkit;
+				MARKETING_VERSION = 1.0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = thejohnlima.BaseNetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -424,8 +312,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
-				PRODUCT_BUNDLE_IDENTIFIER = limadeveloper.basenetworkkit;
+				MARKETING_VERSION = 1.0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = thejohnlima.BaseNetworkKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
