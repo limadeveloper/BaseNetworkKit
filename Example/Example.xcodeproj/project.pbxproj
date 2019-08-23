@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3F9BE523101A53005407BE /* BaseNetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1B3F9BE423101A53005407BE /* BaseNetworkKit */; };
 		1BF368D42310138E00B18D9A /* ObservableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BF368D32310138E00B18D9A /* ObservableKit */; };
-		1BF368D7231013D400B18D9A /* BaseNetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BF368D6231013D400B18D9A /* BaseNetworkKit */; };
 		8231B4E8222E9A7F00FFABB0 /* DashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B4E7222E9A7F00FFABB0 /* DashTableViewCell.swift */; };
 		8231B4EB222E9B9500FFABB0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B4EA222E9B9500FFABB0 /* UIImageView+Extensions.swift */; };
 		826C7405222CA68600B1B119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826C7404222CA68600B1B119 /* AppDelegate.swift */; };
@@ -44,7 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BF368D42310138E00B18D9A /* ObservableKit in Frameworks */,
-				1BF368D7231013D400B18D9A /* BaseNetworkKit in Frameworks */,
+				1B3F9BE523101A53005407BE /* BaseNetworkKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 			name = Example;
 			packageProductDependencies = (
 				1BF368D32310138E00B18D9A /* ObservableKit */,
-				1BF368D6231013D400B18D9A /* BaseNetworkKit */,
+				1B3F9BE423101A53005407BE /* BaseNetworkKit */,
 			);
 			productName = Demo;
 			productReference = 826C7401222CA68600B1B119 /* Example.app */;
@@ -208,7 +208,7 @@
 			mainGroup = 826C73F8222CA68600B1B119;
 			packageReferences = (
 				1BF368D22310138E00B18D9A /* XCRemoteSwiftPackageReference "ObservableKit" */,
-				1BF368D5231013D400B18D9A /* XCRemoteSwiftPackageReference "BaseNetworkKit" */,
+				1B3F9BE323101A53005407BE /* XCRemoteSwiftPackageReference "BaseNetworkKit" */,
 			);
 			productRefGroup = 826C7402222CA68600B1B119 /* Products */;
 			projectDirPath = "";
@@ -446,6 +446,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B3F9BE323101A53005407BE /* XCRemoteSwiftPackageReference "BaseNetworkKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/limadeveloper/BaseNetworkKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.9;
+			};
+		};
 		1BF368D22310138E00B18D9A /* XCRemoteSwiftPackageReference "ObservableKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/limadeveloper/ObservableKit.git";
@@ -454,26 +462,18 @@
 				minimumVersion = 1.0.3;
 			};
 		};
-		1BF368D5231013D400B18D9A /* XCRemoteSwiftPackageReference "BaseNetworkKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/limadeveloper/BaseNetworkKit.git";
-			requirement = {
-				branch = feature/spm_support;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B3F9BE423101A53005407BE /* BaseNetworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B3F9BE323101A53005407BE /* XCRemoteSwiftPackageReference "BaseNetworkKit" */;
+			productName = BaseNetworkKit;
+		};
 		1BF368D32310138E00B18D9A /* ObservableKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1BF368D22310138E00B18D9A /* XCRemoteSwiftPackageReference "ObservableKit" */;
 			productName = ObservableKit;
-		};
-		1BF368D6231013D400B18D9A /* BaseNetworkKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1BF368D5231013D400B18D9A /* XCRemoteSwiftPackageReference "BaseNetworkKit" */;
-			productName = BaseNetworkKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
