@@ -6,7 +6,7 @@ let package = Package(
   name: "BaseNetworkKit",
   platforms: [
       .macOS(.v10_13),
-      .iOS(.v10),
+      .iOS(.v9),
       .watchOS(.v3),
       .tvOS(.v9)
   ],

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BaseNetworkKit",
+        "repositoryURL": "https://github.com/limadeveloper/BaseNetworkKit.git",
+        "state": {
+          "branch": "feature/spm_support",
+          "revision": "38c7e726743af67150ee60da3fa8b4ccea346276",
+          "version": null
+        }
+      },
+      {
+        "package": "ObservableKit",
+        "repositoryURL": "https://github.com/limadeveloper/ObservableKit.git",
+        "state": {
+          "branch": null,
+          "revision": "f76993a45d3587541300e7d39f3d643576b7b899",
+          "version": "1.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

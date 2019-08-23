@@ -1,9 +1,9 @@
 //
 //  UIImageView+Extensions.swift
-//  Demo
+//  Example
 //
 //  Created by John Lima on 05/03/19.
-//  Copyright © 2019 limadeveloper. All rights reserved.
+//  Copyright © 2019 thejohnlima. All rights reserved.
 //
 
 import UIKit

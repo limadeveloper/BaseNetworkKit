@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Demo
+//  Example
 //
 //  Created by John Lima on 03/03/19.
-//  Copyright © 2019 limadeveloper. All rights reserved.
+//  Copyright © 2019 thejohnlima. All rights reserved.
 //
 
 import UIKit

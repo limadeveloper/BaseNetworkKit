@@ -1,9 +1,9 @@
 //
 //  DashAPI.swift
-//  NKDemo
+//  Example
 //
 //  Created by John Lima on 15/03/19.
-//  Copyright © 2019 limadeveloper. All rights reserved.
+//  Copyright © 2019 thejohnlima. All rights reserved.
 //
 
 import Foundation

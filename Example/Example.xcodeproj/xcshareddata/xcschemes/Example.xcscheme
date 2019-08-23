@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "826C7400222CA68600B1B119"
-               BuildableName = "NKDemo.app"
-               BlueprintName = "NKDemo"
-               ReferencedContainer = "container:NKDemo.xcodeproj">
+               BuildableName = "Example.app"
+               BlueprintName = "Example"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "826C7400222CA68600B1B119"
-            BuildableName = "NKDemo.app"
-            BlueprintName = "NKDemo"
-            ReferencedContainer = "container:NKDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +45,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "826C7400222CA68600B1B119"
-            BuildableName = "NKDemo.app"
-            BlueprintName = "NKDemo"
-            ReferencedContainer = "container:NKDemo.xcodeproj">
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "826C7400222CA68600B1B119"
-            BuildableName = "NKDemo.app"
-            BlueprintName = "NKDemo"
-            ReferencedContainer = "container:NKDemo.xcodeproj">
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
