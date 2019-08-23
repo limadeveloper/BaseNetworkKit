@@ -5,17 +5,27 @@
 [![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/BaseNetworkKit)
 [![GitHub repo size](https://img.shields.io/github/repo-size/limadeveloper/BaseNetworkKit.svg)](https://github.com/limadeveloper/BaseNetworkKit)
 [![License](https://img.shields.io/github/license/limadeveloper/BaseNetworkKit.svg)](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/ObservableKit.svg?style=flat)](https://developer.apple.com/ios/)
+[![Platform](https://img.shields.io/cocoapods/p/BaseNetworkKit.svg?style=flat)](https://developer.apple.com/ios/)
 
-**BaseNetworkKit** is the easiest way to create your network layer in Swift.  
-Inspired by [Moya](https://moya.github.io)
+**BaseNetworkKit** is the easiest way to create your network layer in Swift.
 
-## Requirements
+## ❗️Requirements
 
 - iOS 9.3+
-- Swift 4.1+
+- Swift 5.0+
 
-## Installation
+## ⚒ Installation
+
+### Swift Package Manager
+
+**BaseNetworkKit** is available through [SPM](https://developer.apple.com/videos/play/wwdc2019/408/). To install
+it, follow the steps:
+
+```script
+Open Xcode project > File > Swift Packages > Add Package Dependecy
+```
+
+After that, put the url in the field: `https://github.com/limadeveloper/BaseNetworkKit.git`
 
 ### CocoaPods
 
@@ -23,20 +33,12 @@ Inspired by [Moya](https://moya.github.io)
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BaseNetworkKit', '~> 1.0'
+pod 'BaseNetworkKit'
 ```
 
 and run `pod install`
 
-### Manual
-
-Just copy source folder to your project.
-
-```script
-Framework > BaseNetworkKit > Source
-```
-
-## How to use
+## 🎓 How to use
 
 Import library in your network layer:
 
@@ -44,41 +46,45 @@ Import library in your network layer:
 import BaseNetworkKit
 ```
 
-*Example using [`Twitch API`](https://dev.twitch.tv/docs/v5/):*
-
 Setup request
 
 ```Swift
 enum RequesterAPI {
-  case topGames(ModelRequest)
+  // Body can be a model object conform to NKCodable
+  case listOfItems(Body)
 }
 
 extension RequesterAPI: NKFlowTarget {
+  // Set your api
   var baseURL: URL {
-    return URL(stringValue: "https://api.twitch.tv/")
+    return URL(stringValue: "https://your.api")
   }
 
+  // Set your endpoints
   var path: String {
     switch self {
-    case .topGames:
-      return "kraken/games/top"
+    case .listOfItems:
+      return "endpoint1"
     }
   }
 
+  // Set http methods
   var method: NKHTTPMethods {
     return .get
   }
 
+  // Set headers if needed
   var headers: NKCommon.HTTPHeader? {
     return [
-      "Accept": "application/vnd.twitchtv.v5+json",
-      "Client-ID": "5f1mxwqmosk9lsmwoglmz7o6icahcq"
+      "key1": "value2",
+      "key2": "value2"
     ]
   }
 
+  // Here you can set the tasks, like parameters
   var task: NKTask {
     switch self {
-    case .topGames(let body):
+    case .listOfItems(let body):
       guard let params = body.dictionary(), !params.isEmpty else {
         return .requestPlain
       }
@@ -86,6 +92,7 @@ extension RequesterAPI: NKFlowTarget {
     }
   }
 
+  // You want to see the request logs, set the environment to develop
   var environment: NKEnvironment {
     return .develop
   }
@@ -95,22 +102,22 @@ extension RequesterAPI: NKFlowTarget {
 Than, create a request function
 
 ```swift
-class DashService: NKBaseService<DashAPI> {
-  func fetchGames(page: Int, limit: Int, completion: @escaping NKCommon.ResultType<Model>) {
+class Service: NKBaseService<RequesterAPI> {
+  func fetchItems(page: Int, limit: Int, completion: @escaping NKCommon.ResultType<Model>) {
     let requestModel = ModelRequest(offset: "\(page)", limit: "\(limit)")
-    fetch(.topGames(requestModel), dataType: Model.self, completion: completion)
+    fetch(.listOfItems(requestModel), dataType: Model.self, completion: completion)
   }
 }
 ```
 
 *If you need more examples, open [`demo project`](https://github.com/limadeveloper/BaseNetworkKit/tree/master/Demo).*
 
-## Communication
+## 🙋🏻‍  Communication
 
 - If you found a bug, open an issue.
 - If you have a feature request, open an issue.
 - If you want to contribute, submit a pull request. 👨🏻‍💻
 
-## License
+## 📜 License
 
 **BaseNetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE?token=ALdmBr7BYPLFm0JcKkmChbVeGU10EblTks5cgHzcwA%3D%3D) file for more info.
