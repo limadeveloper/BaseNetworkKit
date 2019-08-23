@@ -4,6 +4,12 @@ import PackageDescription
 
 let package = Package(
   name: "BaseNetworkKit",
+  platforms: [
+      .macOS(.v10_13),
+      .iOS(.v10),
+      .watchOS(.v3),
+      .tvOS(.v9)
+  ],
   products: [
     .library(
       name: "BaseNetworkKit",
