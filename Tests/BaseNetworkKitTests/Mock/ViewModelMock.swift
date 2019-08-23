@@ -20,12 +20,20 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import XCTest
+import Foundation
+@testable import BaseNetworkKit
 
-#if !canImport(ObjectiveC)
-public func allTests() -> [XCTestCaseEntry] {
-  return [
-    testCase(BaseNetworkKitTests.allTests),
-  ]
+class ViewModelMock {
+  let service = ServiceMock()
+
+  func fetchData(_ resultType: ResultType, completion: NKCommon.Completion<ModelMock>?) {
+    service.fetchData(resultType) { result in
+      switch result {
+      case .success(_, let data):
+        completion?(data, nil)
+      case .failure(let error):
+        completion?(nil, error)
+      }
+    }
+  }
 }
-#endif

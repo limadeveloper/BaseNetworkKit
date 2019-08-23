@@ -20,12 +20,45 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import XCTest
+import Foundation
+@testable import BaseNetworkKit
 
-#if !canImport(ObjectiveC)
-public func allTests() -> [XCTestCaseEntry] {
-  return [
-    testCase(BaseNetworkKitTests.allTests),
-  ]
+struct ModelMock: NKCodable {
+  let topGames: [GameModel]
+
+  enum CodingKeys: String, CodingKey {
+    case topGames = "top"
+  }
+
+  struct GameModel: NKCodable {
+    let game: Game
+    let viewers: Int
+  }
+
+  struct Game: NKCodable {
+    let name: String
+    let image: Image
+  }
 }
-#endif
+
+extension ModelMock.Game {
+  struct Image: NKCodable {
+    let photo: String
+  }
+
+  enum CodingKeys: String, CodingKey {
+    case name
+    case image = "box"
+  }
+}
+
+extension ModelMock.Game.Image {
+  enum CodingKeys: String, CodingKey {
+    case photo = "medium"
+  }
+}
+
+struct ModelRequestMock: NKCodable {
+  let offset: String
+  let limit: String
+}
