@@ -24,7 +24,7 @@ class DashTableViewCell: UITableViewCell {
   }
 
   // MARK: - Public Methods
-  func setup(_ state: OKState<Model>, atIndex: IndexPath) {
+  func setup(_ state: OKState<Model, Error?>, atIndex: IndexPath) {
     switch state {
     case .load(let model):
       titleLabel.text = model.topGames[atIndex.row].game.name

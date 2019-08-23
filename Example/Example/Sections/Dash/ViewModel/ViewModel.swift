@@ -14,7 +14,7 @@ class ViewModel {
   // MARK: - Properties
   private let requester = DashService()
 
-  let observable: OKObservable<OKState<Model>> = OKObservable(.loading)
+  let observable: OKObservable<OKState<Model, Error?>> = OKObservable(.loading)
   var items: [Model.GameModel] = []
 
   // MARK: - Public Methods
