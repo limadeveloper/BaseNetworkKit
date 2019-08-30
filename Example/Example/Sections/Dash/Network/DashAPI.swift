@@ -6,8 +6,8 @@
 //  Copyright © 2019 thejohnlima. All rights reserved.
 //
 
-import Foundation
 import BaseNetworkKit
+import Foundation
 
 enum DashAPI {
   case topGames(ModelRequest)

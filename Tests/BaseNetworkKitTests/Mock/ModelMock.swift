@@ -20,8 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import Foundation
 @testable import BaseNetworkKit
+import Foundation
 
 struct ModelMock: NKCodable {
   let topGames: [GameModel]

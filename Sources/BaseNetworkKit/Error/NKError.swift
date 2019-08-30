@@ -35,12 +35,12 @@ public enum NKErrorMessage: String {
 }
 
 public enum NKErrorCode: Int {
-  case generic = 99998
-  case withoutInternet = -1009
-  case connectionLost = -1005
-  case hostConnection = -1004
-  case findHost = -1003
-  case timeout = -1001
+  case generic = 99_998
+  case withoutInternet = -1_009
+  case connectionLost = -1_005
+  case hostConnection = -1_004
+  case findHost = -1_003
+  case timeout = -1_001
   case unknown = -1
   case parseError = -2
   case cancelled = -3

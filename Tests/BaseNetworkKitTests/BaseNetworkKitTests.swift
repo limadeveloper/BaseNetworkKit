@@ -20,8 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import XCTest
 @testable import BaseNetworkKit
+import XCTest
 
 final class BaseNetworkKitTests: XCTestCase {
 
@@ -29,7 +29,7 @@ final class BaseNetworkKitTests: XCTestCase {
   private var viewModel: ViewModelMock?
 
   static var allTests = [
-    ("testFetchDataSuccess", testFetchDataSuccess),
+    ("testFetchDataSuccess", testFetchDataSuccess)
   ]
 
   // MARK: - Overrides

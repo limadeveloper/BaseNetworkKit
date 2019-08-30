@@ -32,6 +32,7 @@ enum NKFlowDebugMode {
 // MARK: - Protocols
 protocol NKFlowRequesterExecutorProtocol {
   var debugMode: NKFlowDebugMode { get set }
+
   func execute(request: URLRequest, in session: URLSession, completion: @escaping NKCommon.ResultType<Data>)
 }
 
@@ -55,7 +56,8 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
       } else {
         completion(.failure(NKFlowError.noFound))
       }
-    }.resume()
+    }
+    .resume()
     session.finishTasksAndInvalidate()
   }
 
@@ -92,11 +94,13 @@ class NKFlowRequesterExecutor: NKFlowRequesterExecutorProtocol {
         print("❓ CODE: \(httpResponse.statusCode)")
       }
 
-      if let responseHeadersData = try? JSONSerialization.data(withJSONObject: httpResponse.allHeaderFields, options: .prettyPrinted),
+      let headersData = try? JSONSerialization.data(withJSONObject: httpResponse.allHeaderFields, options: .prettyPrinted)
+
+      if let responseHeadersData = headersData,
         let responseHeadersString = String(data: responseHeadersData, encoding: .utf8) {
         print("↙️ HEADERS:\n\(responseHeadersString)")
       }
-
+      
       if let responseData = responseData,
         let resultDataString = String(data: responseData, encoding: .utf8) {
         print("✅ RESULT:\n\(resultDataString)\n")

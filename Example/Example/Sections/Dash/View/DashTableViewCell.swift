@@ -6,8 +6,8 @@
 //  Copyright © 2019 thejohnlima. All rights reserved.
 //
 
-import UIKit
 import ObservableKit
+import UIKit
 
 class DashTableViewCell: UITableViewCell {
 
@@ -28,7 +28,8 @@ class DashTableViewCell: UITableViewCell {
     switch state {
     case .load(let model):
       titleLabel.text = model.topGames[atIndex.row].game.name
-      photoImageView.loadImage(URL(string: model.topGames[atIndex.row].game.image.photo)!)
+      guard let imageURL = URL(string: model.topGames[atIndex.row].game.image.photo) else { return }
+      photoImageView.loadImage(imageURL)
     default:
       titleLabel.text = nil
       photoImageView.image = nil

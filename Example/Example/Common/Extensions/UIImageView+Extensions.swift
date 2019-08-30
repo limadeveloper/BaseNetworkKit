@@ -10,11 +10,12 @@ import UIKit
 
 extension UIImageView {
   func loadImage(_ url: URL) {
-    URLSession.shared.dataTask(with: url) { data, _, error in
+    URLSession.shared.dataTask(with: url) { data, _, _ in
       guard let data = data else { return }
       DispatchQueue.main.async { [weak self] in
         self?.image = UIImage(data: data)
       }
-    }.resume()
+    }
+    .resume()
   }
 }

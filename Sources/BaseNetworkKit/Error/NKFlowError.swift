@@ -44,22 +44,22 @@ extension NKFlowError: FlowErrorProtocol {
   public var code: Int {
     switch self {
     case .invalidURL:
-      return -7000
+      return -7_000
     case .encode:
-      return -7001
+      return -7_001
     case .network(let error):
       guard let e = error as? URLError else {
         return -0
       }
       return e.errorCode
     case .invalidRequest:
-      return -7002
+      return -7_002
     case .invalidBody:
-      return -7003
+      return -7_003
     case .invalidParameters:
-      return -7004
+      return -7_004
     case .noFound:
-      return -7005
+      return -7_005
     }
   }
 

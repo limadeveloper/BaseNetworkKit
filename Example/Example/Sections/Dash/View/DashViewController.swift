@@ -64,9 +64,9 @@ extension DashViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "\(DashTableViewCell.self)", for: indexPath) as! DashTableViewCell
-    cell.setup(viewModel.observable.value, atIndex: indexPath)
-    return cell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "\(DashTableViewCell.self)", for: indexPath) as? DashTableViewCell
+    cell?.setup(viewModel.observable.value, atIndex: indexPath)
+    return cell ?? UITableViewCell()
   }
 }
 

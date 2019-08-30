@@ -20,8 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-import Foundation
 @testable import BaseNetworkKit
+import Foundation
 
 enum CustomError: Error, CustomStringConvertible {
   case noFound
@@ -165,6 +165,6 @@ extension BaseServiceMock {
             }
         ]
     }
-    """.data(using: .utf8)!
+    """.data(using: .utf8) ?? Data()
   }
 }

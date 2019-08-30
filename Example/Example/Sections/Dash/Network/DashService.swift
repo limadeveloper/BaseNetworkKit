@@ -6,8 +6,8 @@
 //  Copyright © 2019 thejohnlima. All rights reserved.
 //
 
-import Foundation
 import BaseNetworkKit
+import Foundation
 
 final class DashService: NKBaseService<DashAPI> {
   func fetchGames(page: Int, limit: Int, completion: @escaping NKCommon.ResultType<Model>) {
