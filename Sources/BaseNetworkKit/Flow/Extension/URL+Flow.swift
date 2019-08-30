@@ -22,8 +22,8 @@
 
 import Foundation
 
-public extension URL {
-  init<T: NKFlowTarget>(target: T) {
+extension URL {
+  public init<T: NKFlowTarget>(target: T) {
     if target.path.isEmpty {
       self = target.baseURL
     } else {
@@ -31,7 +31,8 @@ public extension URL {
     }
   }
 
-  init(stringValue: String) {
+  // swiftlint:disable force_unwrapping
+  public init(stringValue: String) {
     guard let url = URL(string: stringValue) else {
       assertionFailure("⚠️ string value is not an URL")
       self = URL(string: "")!

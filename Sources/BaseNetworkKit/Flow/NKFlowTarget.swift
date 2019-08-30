@@ -77,12 +77,12 @@ public protocol NKFlowTarget {
   var environment: NKEnvironment { get }
 }
 
-public extension NKFlowTarget {
-  var path: String {
+extension NKFlowTarget {
+  public var path: String {
     return ""
   }
 
-  var headers: NKCommon.HTTPHeader? {
+  public var headers: NKCommon.HTTPHeader? {
     return nil
   }
 }

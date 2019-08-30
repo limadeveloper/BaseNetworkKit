@@ -64,8 +64,8 @@ extension URLRequest {
   }
 }
 
-private extension NSMutableData {
-  func append(_ string: String) {
+extension NSMutableData {
+  public func append(_ string: String) {
     guard let data = string.data(using: .utf8, allowLossyConversion: false) else { return }
     append(data)
   }

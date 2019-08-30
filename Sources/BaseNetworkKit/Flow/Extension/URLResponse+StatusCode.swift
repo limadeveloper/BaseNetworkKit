@@ -22,8 +22,8 @@
 
 import Foundation
 
-public extension URLResponse {
-  enum ValidationStatus {
+extension URLResponse {
+  public enum ValidationStatus {
     case informational
     case success
     case redirection
@@ -32,7 +32,7 @@ public extension URLResponse {
     case unknown
   }
 
-  var validationStatus: ValidationStatus {
+  public var validationStatus: ValidationStatus {
     if let httpResponse = self as? HTTPURLResponse {
       let statusCode = httpResponse.statusCode
       switch statusCode {

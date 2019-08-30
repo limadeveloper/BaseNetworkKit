@@ -22,8 +22,8 @@
 
 import Foundation
 
-public extension Collection {
-  var nkJSON: String? {
+extension Collection {
+  public var nkJSON: String? {
     guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted) else {
       return nil
     }

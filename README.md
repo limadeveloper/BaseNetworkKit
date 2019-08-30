@@ -112,7 +112,7 @@ class Service: NKBaseService<RequesterAPI> {
 
 *If you need more examples, open [`demo project`](https://github.com/limadeveloper/BaseNetworkKit/tree/master/Demo).*
 
-## 🙋🏻‍  Communication
+## 🙋🏻‍ Communication
 
 - If you found a bug, open an issue.
 - If you have a feature request, open an issue.
