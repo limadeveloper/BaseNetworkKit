@@ -1,10 +1,10 @@
 # BaseNetworkKit
 
-[![GitHub release](https://img.shields.io/github/release/limadeveloper/BaseNetworkKit.svg)](https://github.com/limadeveloper/BaseNetworkKit/releases)
-[![Build Status](https://travis-ci.com/limadeveloper/BaseNetworkKit.svg?token=HzevNmMEwiqbuyePKWyP&branch=master)](https://travis-ci.com/limadeveloper/BaseNetworkKit)
+[![GitHub release](https://img.shields.io/github/release/thejohnlima/BaseNetworkKit.svg)](https://github.com/thejohnlima/BaseNetworkKit/releases)
+[![Build Status](https://travis-ci.com/thejohnlima/BaseNetworkKit.svg?token=HzevNmMEwiqbuyePKWyP&branch=master)](https://travis-ci.com/thejohnlima/BaseNetworkKit)
 [![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/BaseNetworkKit)
-[![GitHub repo size](https://img.shields.io/github/repo-size/limadeveloper/BaseNetworkKit.svg)](https://github.com/limadeveloper/BaseNetworkKit)
-[![License](https://img.shields.io/github/license/limadeveloper/BaseNetworkKit.svg)](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE)
+[![GitHub repo size](https://img.shields.io/github/repo-size/thejohnlima/BaseNetworkKit.svg)](https://github.com/thejohnlima/BaseNetworkKit)
+[![License](https://img.shields.io/github/license/thejohnlima/BaseNetworkKit.svg)](https://raw.githubusercontent.com/thejohnlima/BaseNetworkKit/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/BaseNetworkKit.svg?style=flat)](https://developer.apple.com/ios/)
 
 **BaseNetworkKit** is the easiest way to create your network layer in Swift.
@@ -25,7 +25,7 @@ it, follow the steps:
 Open Xcode project > File > Swift Packages > Add Package Dependecy
 ```
 
-After that, put the url in the field: `https://github.com/limadeveloper/BaseNetworkKit.git`
+After that, put the url in the field: `https://github.com/thejohnlima/BaseNetworkKit.git`
 
 ### CocoaPods
 
@@ -110,7 +110,7 @@ class Service: NKBaseService<RequesterAPI> {
 }
 ```
 
-*If you need more examples, open [`demo project`](https://github.com/limadeveloper/BaseNetworkKit/tree/master/Demo).*
+*If you need more examples, open [`demo project`](https://github.com/thejohnlima/BaseNetworkKit/tree/master/Demo).*
 
 ## 🙋🏻‍ Communication
 
@@ -120,4 +120,4 @@ class Service: NKBaseService<RequesterAPI> {
 
 ## 📜 License
 
-**BaseNetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/limadeveloper/BaseNetworkKit/master/LICENSE?token=ALdmBr7BYPLFm0JcKkmChbVeGU10EblTks5cgHzcwA%3D%3D) file for more info.
+**BaseNetworkKit** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/thejohnlima/BaseNetworkKit/master/LICENSE?token=ALdmBr7BYPLFm0JcKkmChbVeGU10EblTks5cgHzcwA%3D%3D) file for more info.
