@@ -6,6 +6,7 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/thejohnlima/BaseNetworkKit.svg)](https://github.com/thejohnlima/BaseNetworkKit)
 [![License](https://img.shields.io/github/license/thejohnlima/BaseNetworkKit.svg)](https://raw.githubusercontent.com/thejohnlima/BaseNetworkKit/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/BaseNetworkKit.svg?style=flat)](https://developer.apple.com/ios/)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/thejohnlima)
 
 **BaseNetworkKit** is the easiest way to create your network layer in Swift.
 
