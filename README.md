@@ -1,12 +1,31 @@
-# BaseNetworkKit
+<h1 align="center">BaseNetworkKit</h1>
 
-[![GitHub release](https://img.shields.io/github/release/thejohnlima/BaseNetworkKit.svg)](https://github.com/thejohnlima/BaseNetworkKit/releases)
-[![Build Status](https://travis-ci.com/thejohnlima/BaseNetworkKit.svg?token=HzevNmMEwiqbuyePKWyP&branch=master)](https://travis-ci.com/thejohnlima/BaseNetworkKit)
-[![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/BaseNetworkKit)
-[![GitHub repo size](https://img.shields.io/github/repo-size/thejohnlima/BaseNetworkKit.svg)](https://github.com/thejohnlima/BaseNetworkKit)
-[![License](https://img.shields.io/github/license/thejohnlima/BaseNetworkKit.svg)](https://raw.githubusercontent.com/thejohnlima/BaseNetworkKit/master/LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/BaseNetworkKit.svg?style=flat)](https://developer.apple.com/ios/)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/thejohnlima)
+<p align="center">
+ <a href="https://github.com/thejohnlima/BaseNetworkKit/releases">
+  <img src="https://img.shields.io/github/v/release/thejohnlima/BaseNetworkKit?style=for-the-badge">
+ </a>
+ <a href="https://github.com/thejohnlima/BaseNetworkKit/actions">
+  <img src="https://img.shields.io/github/workflow/status/thejohnlima/BaseNetworkKit/CI/master?style=for-the-badge">
+ </a>
+ <a href="https://cocoapods.org/pods/BaseNetworkKit">
+  <img src="https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=for-the-badge">
+ </a><br>
+ <a href="https://github.com/thejohnlima/BaseNetworkKit">
+  <img src="https://img.shields.io/github/repo-size/thejohnlima/BaseNetworkKit.svg?style=for-the-badge">
+ </a>
+ <a href="https://raw.githubusercontent.com/thejohnlima/BaseNetworkKit/master/LICENSE">
+  <img src="https://img.shields.io/github/license/thejohnlima/BaseNetworkKit.svg?style=for-the-badge">
+ </a>
+ <a href="https://developer.apple.com/ios/">
+  <img src="https://img.shields.io/cocoapods/p/BaseNetworkKit?style=for-the-badge">
+ </a>
+ <a href="https://developer.apple.com/swift/">
+  <img src="https://img.shields.io/badge/Swift-5-blue.svg?style=for-the-badge">
+ </a>
+ <a href="https://patreon.com/thejohnlima">
+  <img src="https://img.shields.io/badge/donate-patreon-yellow.svg?style=for-the-badge">
+ </a>
+</p>
 
 **BaseNetworkKit** is the easiest way to create your network layer in Swift.
 
