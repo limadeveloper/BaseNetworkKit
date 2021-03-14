@@ -40,7 +40,7 @@ open class NKBaseService<T: NKFlowTarget> {
                                       completion: @escaping NKCommon.ResultType<Value>) {
     provider.request(target) { result in
       switch result {
-      case .success(let response, let data):
+      case .success((let response, let data)):
         guard let value = dataType.init(data) else {
           let e = NKError.parse(NKFlowError.noFound)
           completion(.failure(e))
